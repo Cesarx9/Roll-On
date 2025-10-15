@@ -1,0 +1,44 @@
+# --- Python / venv ---
+.venv/
+venv/
+ENV/
+env/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+.mypy_cache/
+.pytype/
+.pytest_cache/
+.coverage
+*.coverage
+htmlcov/
+
+# --- Edición / IDE ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Archivos del sistema ---
+.DS_Store
+Thumbs.db
+
+# --- Tu proyecto ---
+# Arte y descargas locales que NO quieres versionar
+Music/
+downloads/
+cover.jpg
+yt_cover.*
+frame_raw.jpg
+
+# Cookies / credenciales / logs
+cookies.txt
+*.log
+
+# yt-dlp cache
+.cache/
+EOF
