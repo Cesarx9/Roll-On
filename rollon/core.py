@@ -376,7 +376,7 @@ def descargar_contenido(
 
     # Carpeta base por artista (bajo Music/)
     artista_dir = artista_p or "Desconocido"
-    base_path = os.path.join("/media/music", artista_dir)
+    base_path = os.path.join("Music", artista_dir)
     asegurar_directorio(base_path)
 
     # Variables para modo == '1'
