@@ -21,10 +21,15 @@ Esto instalará Roll-On en modo editable dentro del entorno virtual.
 
 ## 📂 Carpeta de descargas
 
-Por defecto, Roll-On descargará la música en:
+Por defecto, **Roll-On** guarda la música descargada en la siguiente ruta:
+
 ```
-Roll-On/Media/Music
+<directorio actual>/Media/Music
 ```
+
+> 💡 **Nota:**  
+> Asegúrate de ejecutar Roll-On desde el directorio donde deseas que se cree la carpeta `Music`.  
+> Esto te permitirá mantener tus archivos organizados y en la ubicación correcta.
 
 ## 👩‍💻 Uso
 Ejecuta el comando:
@@ -41,7 +46,7 @@ Y sigue las instrucciones en pantalla para seleccionar qué deseas descargar:
 ## 📦 Integración con Jellyfin o Plex
 
 Para que Roll-On funcione perfectamente con Jellyfin o Plex:
-- Configura `Roll-On/Media/Music` como una carpeta de música en tu servidor.
+- Configura `<directorio pwd>/Media/Music` como una carpeta de música en tu servidor.
 - Roll-On descargará automáticamente allí, manteniendo tu biblioteca actualizada.
 
 ## ⚙️ Requisitos
