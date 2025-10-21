@@ -12,8 +12,8 @@ git clone https://github.com/Cesarx9/Roll-On
 cd Roll-On
 sudo apt update
 sudo apt install -y ffmpeg jp2a opus-tools
-python3 -m venv .venv && source .venv/bin/activate
 pip install --upgrade pip
+python3 -m venv .venv && source .venv/bin/activate
 pip install -e .
 ```
 
