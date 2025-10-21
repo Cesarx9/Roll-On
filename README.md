@@ -3,24 +3,23 @@
 
 Roll-On es una herramienta CLI para descargar canciones, álbumes o discografías desde YouTube Music, ideal para servidores multimedia como Jellyfin o Plex.
 
-## Instalación con `pipx`
+## 🚀 Instalación con entorno virtual (venv)
 
-Recomendamos instalar Roll-On usando `pipx` para evitar problemas con entornos virtuales o permisos del sistema.
+Recomendamos instalar Roll-On usando un entorno virtual para evitar conflictos con otros paquetes del sistema.
 
-### 1. Instalar `pipx`
+### 1. Crear y activar el entorno virtual
 ```bash
-sudo apt update
-sudo apt install pipx
-pipx ensurepath
+python3 -m venv .venv
+source .venv/bin/activate  # En Windows: .venv\Scripts activate
 ```
 
-### 2. Instalar Roll-On
+### 2. Instalar dependencias
 ```bash
-cd /ruta/a/Roll-On
-pipx install .
+pip install --upgrade pip
+pip install -e .
 ```
 
-Esto instalará Roll-On como una herramienta global accesible desde cualquier lugar.
+Esto instalará Roll-On en modo editable dentro del entorno virtual.
 
 ## 📂 Carpeta de descargas
 
@@ -39,7 +38,7 @@ Puedes configurar esta carpeta en el archivo `.env` si deseas cambiarla:
 ROLLON_DOWNLOAD_DIR=/ruta/personalizada
 ```
 
-## 🧑‍💻 Uso
+## 👩‍💻 Uso
 Ejecuta el comando:
 ```bash
 rollon
@@ -57,7 +56,7 @@ Para que Roll-On funcione perfectamente con Jellyfin o Plex:
 - Configura `~/Media/Music` como una carpeta de música en tu servidor.
 - Roll-On descargará automáticamente allí, manteniendo tu biblioteca actualizada.
 
-## 🛠️ Requisitos
+## ⚙️ Requisitos
 - Python 3.8+
 - `yt-dlp`, `ffmpeg` y dependencias necesarias para manejar audio
 
