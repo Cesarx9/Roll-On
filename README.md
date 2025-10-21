@@ -2,48 +2,42 @@
 
 Roll-On es una herramienta CLI para descargar canciones, álbumes o discografías desde YouTube Music, ideal para servidores multimedia como Jellyfin o Plex.
 
-## 🐳 Instalación con Docker
+## 🚀 Instalación con entorno virtual (venv)
 
-Recomendamos instalar y ejecutar Roll-On usando Docker para facilitar el despliegue y evitar conflictos con dependencias del sistema.
+Recomendamos instalar Roll-On usando un entorno virtual para evitar conflictos con otros paquetes del sistema.
 
-### 1. Construir la imagen Docker
+### 1. Crear y activar el entorno virtual
 ```bash
-docker build -t rollon .
+python3 -m venv .venv
+source .venv/bin/activate  # En Windows: .venv\Scripts\activate
+
+### 2. Instalar dependencias
+```bash
+pip install --upgrade pip
+pip install -e .
 ```
 
-### 2. Ejecutar el contenedor
-```bash
-docker run --rm -it -v Media/Music:Media/Music rollon
-```
-
-Esto descargará la música directamente en tu carpeta local `Media/Music`.
-Para cambiar la ruta de descarga edita la linea 17 del archivo Dockerfile
-
-## 🧱 Uso con Docker Compose
-
-También puedes usar Docker Compose para una configuración más sencilla:
-
-### 1. Ejecutar con Docker Compose
-```bash
-docker-compose up --build
-```
-
-Esto iniciará el contenedor en modo interactivo y montará la carpeta `Media/Music` como destino de descargas.
+Esto instalará Roll-On en modo editable dentro del entorno virtual.
 
 ## 📂 Carpeta de descargas
 
 Por defecto, Roll-On descargará la música en:
 ```
-Media/Music
+~/Media/Music
 ```
-Para cambiar la ruta de descarga edita la linea 8 del archivo docker-compose.yml
+
 Asegúrate de que esta carpeta exista y tenga permisos de escritura:
 ```bash
-mkdir -p Media/Music
+mkdir -p ~/Media/Music
+```
+
+Puedes configurar esta carpeta en el archivo `.env` si deseas cambiarla:
+```env
+ROLLON_DOWNLOAD_DIR=/ruta/personalizada
 ```
 
 ## 👩‍💻 Uso
-Ejecuta el comando dentro del contenedor:
+Ejecuta el comando:
 ```bash
 rollon
 ```
@@ -57,12 +51,12 @@ Y sigue las instrucciones en pantalla para seleccionar qué deseas descargar:
 ## 📦 Integración con Jellyfin o Plex
 
 Para que Roll-On funcione perfectamente con Jellyfin o Plex:
-- Configura `Media/Music` como una carpeta de música en tu servidor.
+- Configura `~/Media/Music` como una carpeta de música en tu servidor.
 - Roll-On descargará automáticamente allí, manteniendo tu biblioteca actualizada.
 
 ## ⚙️ Requisitos
-- Docker
-- Docker Compose (opcional)
+- Python 3.8+
+- `yt-dlp`, `ffmpeg` y dependencias necesarias para manejar audio
 
 ## 📄 Licencia
 Este proyecto está bajo la licencia MIT.
