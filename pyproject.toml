@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-rollon = "rollon.menu:main"  # Ejecutar `rollon` abre el menú interactivo en español
+rollon = "rollon.menu:main"
 
 [tool.setuptools]
 packages = ["rollon"]
