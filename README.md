@@ -6,12 +6,13 @@ Roll-On es una herramienta CLI para descargar canciones, álbumes o discografía
 
 Recomendamos instalar Roll-On usando un entorno virtual para evitar conflictos con otros paquetes del sistema.
 
-### 1. Crear y activar el entorno virtual
+### 1. Guía de instalación y entorno virtual para Roll-On
 ```bash
 git clone https://github.com/Cesarx9/Roll-On
 cd Roll-On
-bash setup.sh
-python3 -m venv .venv  && . .venv/bin/activate
+sudo apt update
+sudo apt install -y ffmpeg jp2a opus-tools
+python3 -m venv .venv && source .venv/bin/activate
 pip install --upgrade pip
 pip install -e .
 ```
@@ -22,17 +23,7 @@ Esto instalará Roll-On en modo editable dentro del entorno virtual.
 
 Por defecto, Roll-On descargará la música en:
 ```
-~/Media/Music
-```
-
-Asegúrate de que esta carpeta exista y tenga permisos de escritura:
-```bash
-mkdir -p ~/Media/Music
-```
-
-Puedes configurar esta carpeta en el archivo `.env` si deseas cambiarla:
-```env
-ROLLON_DOWNLOAD_DIR=/ruta/personalizada
+Roll-On/Media/Music
 ```
 
 ## 👩‍💻 Uso
@@ -50,12 +41,12 @@ Y sigue las instrucciones en pantalla para seleccionar qué deseas descargar:
 ## 📦 Integración con Jellyfin o Plex
 
 Para que Roll-On funcione perfectamente con Jellyfin o Plex:
-- Configura `~/Media/Music` como una carpeta de música en tu servidor.
+- Configura `Roll-On/Media/Music` como una carpeta de música en tu servidor.
 - Roll-On descargará automáticamente allí, manteniendo tu biblioteca actualizada.
 
 ## ⚙️ Requisitos
 - Python 3.8+
-- `yt-dlp`, `ffmpeg` y dependencias necesarias para manejar audio
+- `yt-dlp`, `ffmpeg`, `jp2a` y `opus-tools`
 
 ## 📄 Licencia
 Este proyecto está bajo la licencia MIT.
