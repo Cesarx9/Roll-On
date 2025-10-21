@@ -2,7 +2,6 @@
 .venv/
 venv/
 ENV/
-env/
 *.pyc
 __pycache__/
 *.pyo
@@ -22,23 +21,18 @@ htmlcov/
 .vscode/
 .idea/
 *.code-workspace
-
 # --- Archivos del sistema ---
 .DS_Store
 Thumbs.db
-
-# --- Tu proyecto ---
-# Arte y descargas locales que NO quieres versionar
+# Arte y descargas locales
 Music/
 downloads/
 cover.jpg
 yt_cover.*
 frame_raw.jpg
-
 # Cookies / credenciales / logs
 cookies.txt
 *.log
-
 # yt-dlp cache
 .cache/
 EOF
