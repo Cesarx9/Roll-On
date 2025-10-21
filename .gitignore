@@ -1,3 +1,4 @@
+
 # --- Python / venv ---
 .venv/
 venv/
@@ -21,18 +22,32 @@ htmlcov/
 .vscode/
 .idea/
 *.code-workspace
+
 # --- Archivos del sistema ---
 .DS_Store
 Thumbs.db
-# Arte y descargas locales
+
+# --- Arte y descargas locales ---
 Music/
 downloads/
 cover.jpg
 yt_cover.*
 frame_raw.jpg
-# Cookies / credenciales / logs
+
+# --- Cookies / credenciales / logs ---
 cookies.txt
 *.log
-# yt-dlp cache
+
+# --- yt-dlp cache ---
 .cache/
-EOF
+
+# --- PyPI / empaquetado ---
+*.tar.gz
+*.whl
+
+# --- Archivos temporales ---
+*.tmp
+*.bak
+
+# --- Archivos de configuración ---
+.pypirc
