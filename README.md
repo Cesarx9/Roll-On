@@ -9,8 +9,11 @@ Recomendamos instalar Roll-On usando un entorno virtual para evitar conflictos c
 ### 1. Crear y activar el entorno virtual
 ```bash
 git clone https://github.com/Cesarx9/Roll-On
-cd rollon
+cd Roll-On
 bash setup.sh
+python3 -m venv .venv  && . .venv/bin/activate
+pip install --upgrade pip
+pip install -e .
 ```
 
 Esto instalará Roll-On en modo editable dentro del entorno virtual.
