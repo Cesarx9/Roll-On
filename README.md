@@ -8,7 +8,7 @@ Recomendamos instalar Roll-On usando un entorno virtual para evitar conflictos c
 
 ### 1. Crear y activar el entorno virtual
 ```bash
-git clone https://github.com/<you>/rollon.git
+git clone https://github.com/Cesarx9/Roll-On
 cd rollon
 python -m venv .venv && . .venv/bin/activate
 pip install --upgrade pip
