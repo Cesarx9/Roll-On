@@ -2,22 +2,27 @@
 
 Roll-On es una herramienta CLI para descargar canciones, álbumes o discografías desde YouTube Music, ideal para servidores multimedia como Jellyfin o Plex.
 
-## 🚀 Instalación con entorno virtual (venv)
+## 🚀 Instalación con PIP
 
-Recomendamos instalar Roll-On usando un entorno virtual para evitar conflictos con otros paquetes del sistema.
+## 🔧 Requisitos del sistema
 
-### 1. Guía de instalación y entorno virtual para Roll-On
+Antes de instalar Roll-On, asegúrate de tener estas herramientas instaladas:
+
+>ffmpeg
+>jp2a
+>opus-tools
+
+Puedes instalarlos con el siguiente comando:
 ```bash
-git clone https://github.com/Cesarx9/Roll-On
-cd Roll-On
-sudo apt update
-sudo apt install -y ffmpeg jp2a opus-tools
-python3 -m venv .venv && source .venv/bin/activate
-pip install --upgrade pip
-pip install -e .
+sudo apt update && sudo apt install -y ffmpeg jp2a opus-tools
 ```
 
-Esto instalará Roll-On en modo editable dentro del entorno virtual.
+### 1. Instalacion
+```bash
+pip install rollon
+```
+
+Esto instalará Roll-On.
 
 ## 📂 Carpeta de descargas
 
