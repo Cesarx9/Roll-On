@@ -8,13 +8,10 @@ Recomendamos instalar Roll-On usando un entorno virtual para evitar conflictos c
 
 ### 1. Crear y activar el entorno virtual
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate  # En Windows: .venv\Scripts\activate
-
-### 2. Instalar dependencias
-```bash
+git clone https://github.com/<you>/rollon.git
+cd rollon
+python -m venv .venv && . .venv/bin/activate
 pip install --upgrade pip
-pip install -e .
 ```
 
 Esto instalará Roll-On en modo editable dentro del entorno virtual.
