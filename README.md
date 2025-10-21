@@ -8,13 +8,14 @@ Roll-On es una herramienta CLI para descargar canciones, álbumes o discografía
 
 Antes de instalar Roll-On, asegúrate de tener estas herramientas instaladas:
 
->ffmpeg
->jp2a
->opus-tools
+> ffmpeg
+> jp2a
+> opus-tools
+> opustags
 
 Puedes instalarlos con el siguiente comando:
 ```bash
-sudo apt update && sudo apt install -y ffmpeg jp2a opus-tools
+sudo apt update && sudo apt install -y ffmpeg jp2a opus-tools opustags
 ```
 
 ### 1. Instalacion
@@ -56,7 +57,7 @@ Para que Roll-On funcione perfectamente con Jellyfin o Plex:
 
 ## ⚙️ Requisitos
 - Python 3.8+
-- `yt-dlp`, `ffmpeg`, `jp2a` y `opus-tools`
+- `yt-dlp`, `ffmpeg`, `jp2a`, `opus-tools` y `opustags`
 
 ## 📄 Licencia
 Este proyecto está bajo la licencia MIT.
