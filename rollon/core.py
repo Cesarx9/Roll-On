@@ -363,7 +363,7 @@ def descargar_contenido(
     art_size: int = TAMANO_ARTE_POR_DEFECTO,
     prefer_max: bool = APPLE_TRUCO_MAXIMO,
     country: str = PAIS_POR_DEFECTO,
-    cookies_path: Optional[str] = "cookies.txt",
+    cookies_path: Optional[str] = "../cookies.txt",
 ):
     """
     Descarga y post-procesa contenido:
