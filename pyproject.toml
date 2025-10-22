@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rollon"
-version = "0.1.4"
+version = "0.1.5"
 description = "Roll-On: Descargas con yt-dlp, UI limpia y portada Apple para OPUS (menú interactivo)."
 readme = "README.md"
 requires-python = ">=3.9"

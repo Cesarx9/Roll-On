@@ -111,7 +111,7 @@ def _descargar_portada_ytdlp(url: str, out_dir: str, modo: str) -> str | None:
         "-P", out_dir,
         "--output-na-placeholder", "",
         "-o", "yt_cover.%(ext)s",
-        url,
+        url, "--cookies", cookies_path
     ]
     if modo == "single":
         cmd += ["--no-playlist"]
@@ -426,8 +426,6 @@ def descargar_contenido(
         # Sugerencia: si quieres fijar bitrate de salida, agrega por ejemplo:
         # "--audio-quality", "192K",
     ]
-    if cookies_path:
-        cmd += ["--cookies", cookies_path]
     if modo == '1':
         cmd += ["--no-playlist"]
     elif modo in ('2', '3'):
