@@ -376,7 +376,7 @@ def descargar_contenido(
 
     # Carpeta base por artista (bajo Music/)
     artista_dir = artista_p or "Desconocido"
-    base_path = os.path.join("Music", artista_dir)
+    base_path = os.path.join("/mnt/datos/Music", artista_dir)
     asegurar_directorio(base_path)
 
     # Variables para modo == '1'
@@ -741,3 +741,4 @@ def descargar_contenido(
                     print(f"[{album_name}] listo: {len(opus_files)} pista(s) con portada y metadata.")
                 print(f"Discografía: {total_albums} álbum(es) procesado(s), {total_files} pistas con portada.")
                 print("")
+
